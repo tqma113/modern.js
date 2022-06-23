@@ -5036,6 +5036,16 @@ importers:
       '@types/react-dom': 17.0.11
       typescript: 4.5.4
 
+  tests/integration/module-tools/cli:
+    specifiers:
+      '@modern-js/core': workspace:*
+      '@modern-js/module-tools': workspace:*
+      '@modern-js/plugin-less': workspace:*
+    devDependencies:
+      '@modern-js/core': link:../../../../packages/cli/core
+      '@modern-js/module-tools': link:../../../../packages/solutions/module-tools
+      '@modern-js/plugin-less': link:../../../../packages/cli/plugin-less
+
   tests/integration/mwa-app:
     specifiers:
       '@modern-js/app-tools': workspace:*
@@ -5131,14 +5141,6 @@ importers:
     devDependencies:
       '@modern-js/app-tools': link:../../../packages/solutions/app-tools
       '@modern-js/plugin-jarvis': link:../../../packages/cli/plugin-jarvis
-
-  tests/integration/style-only-test:
-    specifiers:
-      '@modern-js/module-tools': workspace:*
-      '@modern-js/plugin-less': workspace:*
-    devDependencies:
-      '@modern-js/module-tools': link:../../../packages/solutions/module-tools
-      '@modern-js/plugin-less': link:../../../packages/cli/plugin-less
 
   tests/integration/testing-app:
     specifiers:
@@ -21208,8 +21210,6 @@ packages:
       sudo-prompt: 8.2.5
       tmp: 0.0.33
       tslib: 1.14.1
-    transitivePeerDependencies:
-      - supports-color
     dev: false
 
   /devtools-protocol/0.0.901419:
@@ -27812,7 +27812,7 @@ packages:
         optional: true
     dependencies:
       abab: 2.0.5
-      acorn: 8.7.1
+      acorn: 8.7.0
       acorn-globals: 6.0.0
       cssom: 0.4.4
       cssstyle: 2.3.0
